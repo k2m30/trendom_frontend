@@ -1,14 +1,8 @@
 use Rack::Static,
     urls: %w(/img /js /css /fonts),
-    root: 'public'
+    root: 'public',
+    index: 'index.html'
 
-run lambda { |env|
-  [
-      200,
-      {
-          'Content-Type'  => 'text/html',
-          'Cache-Control' => 'public, max-age=8'
-      },
-      File.open('public/index.html', File::RDONLY)
-  ]
-}
+use Rack::CommonLogger
+use Rack::Reloader
+run Rack::File.new('public')
