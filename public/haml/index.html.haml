@@ -1,0 +1,227 @@
+!!!
+%html{:lang => "en"}
+  = Haml::Engine.new(File.read('public/haml/_head.html.haml')).render
+  %body#page-top.index
+    / Navigation
+    %nav.navbar.navbar-default.navbar-fixed-top
+      = Haml::Engine.new(File.read('public/haml/_nav.html.haml')).render
+
+    %header
+      .container
+        .intro-text
+          .intro-lead-in
+            You choose right the people on social networks,
+            %br
+            we reveal their emails
+          -#.intro-heading It's Nice To Meet You
+          .intro-lead-in
+            Learn to send smart, targeted emails with our tutorials and guidelines
+          -#%a.page-scroll.btn.btn-xl{:href => '#services'} Tell Me More
+    / Services Section
+    %section#howitworks
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Our Chrome extension
+            %h3.section-subheading.text-muted Get the info right out of your Linkedin search
+        .row
+          .col-lg-10.col-lg-offset-1
+            %a{href: 'img/howitworks.png', target: '_blank'}
+              %img{src: 'img/howitworks.png', width: '100%'}
+    %section#scenarios
+      = Haml::Engine.new(File.read('public/haml/_scenarios.html.haml')).render
+    -#/ Portfolio Grid Section
+    -#%section#portfolio.bg-light-gray
+    -#  = Haml::Engine.new(File.read('public/haml/_nav.html.haml')).render
+    / About Section
+    %section#cases
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Ok, suppose I’ve got emails. What’s next?
+            %h3.section-subheading.text-muted Read best cold emailing practises and follow our tutorials
+        .row
+          .col-lg-12
+            %h3.text-center CASE1: THE $3,000 CONTRACT EMAIL
+            %p.large
+              Bryan Harris, who used to coach us, is an absolute beast when it comes to cold email. Fortunately, he also likes to share what he does with his readers. Which is why we have gems like this email:
+            %img{src: 'img/case1.jpg', width: '100%'}
+            %p.large
+              There’s so much to love here:
+              %br
+              %ul.large
+                %li
+                  %p.large Bryan states clearly that not only is he familiar with the product, but is also a customer.
+                %li
+                  %p.large He drops a big name right in the second line. By telling the reader that an industry leader, KISSmetrics, trusts his work, he is establishing that he knows his stuff.
+                %li
+                  %p.large He links to an actual example of his work on the KISSmetrics blog.
+                %li
+                  %p.large Offer value: this is where the email stands out – Bryan gives away incredible value by showing what the final product might look like. Sure, it would have taken an extra couple of hours, but by doing this, he ensures that he’ll at least get noticed.
+                %li
+                  %p.large He closes with a question. This makes it easy for the reader to respond to the email with an answer and increases chances of getting a response.
+            %h4
+              WHAT YOU CAN LEARN FROM IT
+            %p.large
+              Don’t be afraid to give away tons of value. It means more work upfront, but you’ll stand out in the inbox.
+        .row
+          .col-lg-12
+            %h3.text-center CASE2: A SALES MEETING COLD MAIL DONE RIGHT
+            %p.large
+              The folks at Close.io shared this as one of their 5 templates to start a conversation with a prospective lead. The entire post is a fantastic read, but I thought I’d pick apart the first one.
+            %img{src: 'img/case2.jpg', width: '100%'}
+            %p.large
+              Here’s what we love about it:
+              %br
+              %ul.large
+                %li
+                  %p.large Clearly identifies the sender, his current role, and what he’s trying to sell. I don’t know about you, but I sure like to know who’s pitching me a product.
+                %li
+                  %p.large Stab in the dark” is an informal, even fun way to put it. Plus, it shows that the sender has done the research and just needs a final nudge in the right direction. (Pro tip: if you don’t know who to send an email to, just ask!).
+                %li
+                  %p.large The invite to discuss the product clearly lists the exact time and date. It also mentions that the call will be only fifteen minutes long. Which is nice because it saves everyone time in scheduling the meeting.
+            %h4
+              WHAT YOU CAN LEARN FROM IT
+            %p.large
+              Identify yourself clearly upfront, verify whether you’re talking to the right person, and clearly mention how much of their time you want (and when do you want it).
+        .row
+          .col-lg-12
+            %h3.text-center CASE3: THE COLD EMAIL THAT WON ONE CO-FOUNDER MEETINGS AT LINKEDIN AND TWITTER
+            %p.large
+              Takipi is a tool that helps developers understand when their code breaks in production. Since it requires an installation on a live server, selling it to developers isn’t an easy task.
+              %br
+              Yet, Iris Shoor, the co-founder of Takipi, managed to get 5 installation from cold emails alone – 1.5x more than what she got through introductions.
+              %br
+              This is an example of an email she sent out to a company that used Scala:
+            %img{src: 'img/case3.jpg', width: '100%'}
+            %p.large
+              Plenty of good stuff here:
+              %br
+              %ul.large
+                %li
+                  %p.large A nice, succinct introduction. Iris gets right into what Takipi does and how it’s relevant to the company.
+                %li
+                  %p.large Iris knows that the company runs Scala, so instead of sending them to the homepage, she linked to Takipi’s Scala-focused landing page.
+                %li
+                  %p.large Iris mentions the recipient’s Github page and recent projects, which shows that she has done her homework.
+            %h4
+              WHAT YOU CAN LEARN FROM IT
+            %p.large
+              Craft an email for just one person. Don’t tell them about everything your company does. Instead, personalize your email for one person alone and create an email that solves his/her specific problems.
+
+    / Clients Aside
+    %aside.clients
+      .container
+        .row
+          .col-md-3.col-sm-6
+            %a{:href => '#'}
+              %img.img-responsive.img-centered{:alt => '', :src => 'img/logos/envato.jpg'}/
+          .col-md-3.col-sm-6
+            %a{:href => '#'}
+              %img.img-responsive.img-centered{:alt => '', :src => 'img/logos/designmodo.jpg'}/
+          .col-md-3.col-sm-6
+            %a{:href => '#'}
+              %img.img-responsive.img-centered{:alt => '', :src => 'img/logos/themeforest.jpg'}/
+          .col-md-3.col-sm-6
+            %a{:href => '#'}
+              %img.img-responsive.img-centered{:alt => '', :src => 'img/logos/creative-market.jpg'}/
+
+    %section#tariffs
+      .container
+        .row
+        .col-lg-12.text-center
+          %h2.section-heading Select a plan
+          %h3.section-subheading.text-muted Choose one
+        .row
+          .col-md-4
+            .plan.beginner
+              %h4.text-center Beginner
+              %ul
+                %li
+                  %p.large
+                    %strong $39 Monthly per user
+                %li
+                  %p.large 80 prospects
+                %li
+                  %p.large
+                    \~
+                    48¢ per contact
+                %li
+                  %p.large Enrich leads
+                %li
+                  %p.large Add Excel sheets
+                %li
+                  %p.large Access to Essential Guidelines
+            %a.center-block.beginner.btn.btn-xl{href: '#', role: 'button'}
+              Choose plan
+          .col-md-4
+            .plan.advanced
+              %h4.text-center Advanced
+              %ul
+                %li
+                  %p.large $99 Monthly per user
+                %li
+                  %p.large 250 prospects (~39¢ per contact)
+                %li
+                  %p.large
+                    \~
+                    39¢ per contact
+                %li
+                  %p.large Enrich leads
+                %li
+                  %p.large Add Excel and Google sheets
+                %li
+                  %p.large Access to Full Guidelines
+            %a.center-block.advanced.btn.btn-xl{href: '#', role: 'button'}
+              Choose plan
+          .col-md-4
+            .plan.special
+              %h4.text-center Special
+              %ul
+                %li
+                  %p.large Mass emails
+                %li
+                  %p.large CRM integration
+                %li
+                  %p.large Scheduled prospects delivery
+                %li
+                  %p.large Particular site with emails
+                %li
+                  %p.large You need special quotation
+                %li
+                  %p.large Any customization
+            %a.center-block.special.btn.btn-xl{href: 'mailto:team@trendom.io', role: 'button'}
+              Contact us
+
+
+    /Footer
+    = Haml::Engine.new(File.read('public/haml/_footer.html.haml')).render
+    / jQuery
+    %script{:src => 'js/jquery.js'}
+    / Bootstrap Core JavaScript
+    %script{:src => 'js/bootstrap.min.js'}
+    / Plugin JavaScript
+    %script{:src => 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'}
+    %script{:src => 'js/classie.js'}
+    %script{:src => 'js/cbpAnimatedHeader.js'}
+    / Contact Form JavaScript
+    %script{:src => 'js/jqBootstrapValidation.js'}
+    %script{:src => 'js/contact_me.js'}
+    / Custom Theme JavaScript
+    %script{:src => 'js/agency.js'}
+    :javascript
+      (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function () {
+                      (i[r].q = i[r].q || []).push(arguments)
+                  }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+                  m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-53378414-4', 'auto');
+      ga('require', 'linkid');
+      ga('send', 'pageview');

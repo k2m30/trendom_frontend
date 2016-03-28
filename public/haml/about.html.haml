@@ -1,0 +1,117 @@
+!!!
+%html{:lang => "en"}
+  = Haml::Engine.new(File.read('public/haml/_head.html.haml')).render
+  %body#page-top.index
+    / Navigation
+    %nav.navbar.navbar-default.navbar-fixed-top
+      = Haml::Engine.new(File.read('public/haml/_nav.html.haml')).render
+
+    %header
+      .container
+        .intro-text
+          .intro-lead-in
+            Here we are
+    -#%a.page-scroll.btn.btn-xl{:href => '#services'} Tell Me More
+
+    / Team Section
+    %section#team.bg-light-gray
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Our Amazing Team
+            %h3.section-subheading.text-muted We are really glad to do it for you.
+        .row
+          .col-sm-4
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "img/team/1.jpg"}/
+              %h4 Joan Adams
+              %p.text-muted Lead Designer
+              -#%ul.list-inline.social-buttons
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-twitter
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-facebook
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "img/team/2.jpg"}/
+              %h4 Logan Jones
+              %p.text-muted Lead Marketer
+              -#%ul.list-inline.social-buttons
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-twitter
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-facebook
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              %img.img-responsive.img-circle{:alt => "", :src => "img/team/3.jpg"}/
+              %h4 Zara Garner
+              %p.text-muted Lead Developer
+              -#%ul.list-inline.social-buttons
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-twitter
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-facebook
+              -#  %li
+              -#    %a{:href => "#"}
+              -#      %i.fa.fa-linkedin
+    %section#company
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Our company
+            %h3.section-subheading.text-muted We are really glad to do it for you.
+        .row
+          .col-sm-4
+            %p.large.text-muted
+              We are European company located in Belarus.
+            %p.large.text-muted
+              We started in 2014 as a small email marketing company.
+            %p.large.text-muted
+              Then we multiplied our marketing expertise times technology.
+            %p.large.text-muted
+              And here we are.
+          .col-sm-4
+            %table.table.text-muted
+              %tbody
+                %tr
+                  %td
+                    %p.large.text-muted Managing Director
+                  %td
+                    %p.large.text-muted Mikhail Chuprynski
+                %tr
+                  %td
+                    %p.large.text-muted City
+                  %td
+                    %p.large.text-muted Mogilev
+                %tr
+                  %td
+                    %p.large.text-muted Address
+                  %td
+                    %p.large.text-muted 212002, Mayakovskogo 49a
+                %tr
+                  %td
+                    %p.large.text-muted Phone
+                  %td
+                    %p.large.text-muted
+                      %a{tel: '+7 981 970 83 19'} +7 981 970 83 19
+                %tr
+                  %td
+                    %p.large.text-muted Email
+                  %td
+                    %p.large.text-muted
+                      %a{href: 'mailto:team@trendom.io'} team@trendom.io
+
+    /Footer
+    = Haml::Engine.new(File.read('public/haml/_footer.html.haml')).render
