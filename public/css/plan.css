@@ -6,9 +6,12 @@
     color: white;
 }
 
-a.center-block.btn.btn-xl{
-    margin: 5px;
+.btn-plan{
     border: none;
+}
+
+button h4{
+    color: white;
 }
 
 .beginner{

@@ -152,8 +152,15 @@
                   %p.large Add Excel sheets
                 %li
                   %p.large Access to Essential Guidelines
-            %a.center-block.beginner.btn.btn-xl{href: '#', role: 'button'}
-              Choose plan
+            %form{:action => 'https://sandbox.2checkout.com/checkout/purchase', :method => 'post'}
+              %input{:name => 'sid', :type => 'hidden', :value => '202864835'}
+              %input{:name => 'mode', :type => 'hidden', :value => '2CO'}
+              %input{:name => 'li_0_type', :type => 'hidden', :value => 'product'}
+              %input{:name => 'li_0_name', :type => 'hidden', :value => 'Monthly Subscription'}
+              %input{:name => 'li_0_price', :type => 'hidden', :value => '39.00'}
+              %input{:name => 'li_0_recurrence', :type => 'hidden', :value => '1 Month'}
+              %button.btn.btn-block.beginner{:name => 'submit', :type => 'submit', :value => 'Choose beginner'}
+                %h4.text-center Choose beginner
           .col-md-4
             .plan.advanced
               %h4.text-center Advanced
@@ -161,7 +168,7 @@
                 %li
                   %p.large $99 Monthly per user
                 %li
-                  %p.large 250 prospects (~39¢ per contact)
+                  %p.large 250 prospects
                 %li
                   %p.large
                     \~
@@ -172,8 +179,18 @@
                   %p.large Add Excel and Google sheets
                 %li
                   %p.large Access to Full Guidelines
-            %a.center-block.advanced.btn.btn-xl{href: '#', role: 'button'}
-              Choose plan
+
+
+            %form{:action => 'https://sandbox.2checkout.com/checkout/purchase', :method => 'post'}
+              %input{:name => 'sid', :type => 'hidden', :value => '202864835'}
+              %input{:name => 'mode', :type => 'hidden', :value => '2CO'}
+              %input{:name => 'li_0_type', :type => 'hidden', :value => 'product'}
+              %input{:name => 'li_0_name', :type => 'hidden', :value => 'Monthly Subscription'}
+              %input{:name => 'li_0_price', :type => 'hidden', :value => '99.00'}
+              %input{:name => 'li_0_recurrence', :type => 'hidden', :value => '1 Month'}
+              %button.btn.btn-block.advanced{:name => 'submit', :type => 'submit', :value => 'Choose advanced'}
+                %h4.text-center Choose advanced
+
           .col-md-4
             .plan.special
               %h4.text-center Special
@@ -190,8 +207,12 @@
                   %p.large You need special quotation
                 %li
                   %p.large Any customization
-            %a.center-block.special.btn.btn-xl{href: 'mailto:team@trendom.io', role: 'button'}
-              Contact us
+            %a{href: 'mailto:team@trendom.io', role: 'button'}
+              %button.btn.btn-block.special{href: 'mailto:team@trendom.io', :name => 'submit', :type => 'submit', :value => 'Choose advanced'}
+                %h4.text-center Contact us
+
+            -#%a.center-block.special.btn.btn-xl{href: 'mailto:team@trendom.io', role: 'button'}
+            -#  Contact us
 
 
     /Footer
