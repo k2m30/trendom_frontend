@@ -152,7 +152,8 @@
                   %p.large Add Excel sheets
                 %li
                   %p.large Access to Essential Guidelines
-            %form{:action => 'https://www.2checkout.com/checkout/purchase', :method => 'post'}
+            -#%form{:action => 'https://www.2checkout.com/checkout/purchase', :method => 'post'}
+            %form{:action => 'http://account.trendom.io', :method => 'get'}
               %input{:name => 'sid', :type => 'hidden', :value => '202864835'}
               %input{:name => 'mode', :type => 'hidden', :value => '2CO'}
               %input{:name => 'li_0_type', :type => 'hidden', :value => 'product'}
@@ -162,7 +163,7 @@
               %input{:name => 'li_0_recurrence', :type => 'hidden', :value => '1 Month'}
               %input{:name => 'li_0_tangible', :type => 'hidden', :value => 'N'}
               %input{:name => 'currency_code', :type => 'hidden', :value => 'USD'}
-              %button.btn.btn-block.advanced{:name => 'submit', :type => 'submit', :value => 'Choose advanced'}
+              %button.btn.btn-block.beginner{:name => 'submit', :type => 'submit', :value => 'Choose advanced'}
                 %h4.text-center Choose Beginner
 
           .col-md-4
@@ -185,7 +186,7 @@
                   %p.large Access to Full Guidelines
 
 
-            %form{:action => 'https://www.2checkout.com/checkout/purchase', :method => 'post'}
+            %form{:action => 'http://account.trendom.io', :method => 'get'}
               %input{:name => 'sid', :type => 'hidden', :value => '202864835'}
               %input{:name => 'mode', :type => 'hidden', :value => '2CO'}
               %input{:name => 'li_0_type', :type => 'hidden', :value => 'product'}
